@@ -1,0 +1,65 @@
+.logo{
+    font-weight: bold;
+    color: white;
+    font-size: larger;
+    border-bottom: 2px solid purple;
+    margin: -43px;
+}
+.lnks2{
+    text-decoration: none;
+   
+}
+.lnks{
+    text-decoration: none;
+   color:black;
+}
+.lnks2:hover{
+   color:purple;
+    cursor: pointer; 
+
+}
+.active-lnks{
+    color:purple;
+   margin: 2px;
+   font-weight: bold;
+   
+}
+.active-lnks2{
+    color:purple !important;
+    margin: 2px;
+    font-weight: bold;
+    
+ }
+.lnk{
+    text-decoration: none;
+  color:black;
+}
+.logo2{
+   color:purple;
+    font-size: larger;
+    font-weight: bold;
+}
+.back{
+   
+    width: 200px !important;
+    background-color: darkcyan !important;
+    color: white !important;
+    flex: "0 0 auto" !important;
+    
+}
+.offcanvas-header .btn-close{
+    color: white !important;
+}
+.accordion-item:first-of-type .accordion-button{
+    background-color: purple !important;
+    color: white !important;
+}
+
+.ant-space-item{
+    color: black !important;
+}
+.ant-space-item:hover{
+    color: purple !important;
+}
+
+  
