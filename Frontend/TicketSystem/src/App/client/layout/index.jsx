@@ -1,7 +1,6 @@
 import React, {useState } from 'react'
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
 import Sidebars from './Sidebar';
-import { HomeFilled } from '@ant-design/icons';
 import { LogOut, Menu,Grid } from 'react-feather';
 import { _uselogin } from '../../../Logic/actions/_common';
 const ClientLayout = ({children}) => {

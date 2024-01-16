@@ -1,9 +1,8 @@
 import React from 'react';
-import {FileText, Grid, Home, LogOut, User, UserCheck,  } from 'react-feather';
-import { useNavigate, Link, useLocation } from 'react-router-dom';
+import {FileText, Grid,LogOut, User  } from 'react-feather';
+import {  Link, useLocation } from 'react-router-dom';
 import useActive from '../../../Logic/actions/_useactive';
 import { _uselogin } from '../../../Logic/actions/_common';
-import { Button } from 'react-bootstrap';
 const Sidebars = ({title=true}) => {
   const navbars = [
     { name: 'Dashboard', icon:<Grid size={15} color='orange'/>, pathname: '/_', divider: true },
@@ -32,13 +31,7 @@ const Sidebars = ({title=true}) => {
     }
    
   ];
-  const navs=()=>{
-    const route=useNavigate();
-    return route('/client');
-  }
   const{remove}=_uselogin()
-//ant deign dropdown
-const navigate = useNavigate();
 const loc=useLocation().pathname;
 
   const { isactive } = useActive();
