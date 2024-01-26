@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Authcontext, _useauth } from "../context/Authcontext";
+import Cookies from "js-cookie";
 const Redirecting = () => {
-  const [count, setCount] = useState(5);
-
+  const [count, setCount] = useState(10);
+const [auth,setauth]=_useauth();
   const router = useNavigate();
 
   useEffect(() => {
@@ -11,7 +12,13 @@ const Redirecting = () => {
       setCount(count - 1);
     }, 1000);
 
-    if (count === 0) router("/login");
+    if (count === 0) {router("/login");
+    setauth({
+      user: null,
+      token: "",
+    });
+    Cookies.remove("auth");
+  };
 
     return () => clearInterval(_interval);
   }, [count]);

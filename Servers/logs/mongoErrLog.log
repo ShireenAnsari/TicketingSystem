@@ -35,3 +35,5 @@
 20240115	14:38:26	ab2cd5e2-71e7-4d67-9ef7-cc3ff6227019	undefined: ETIMEOUT	queryTxt	cluster0.j4vwb4o.mongodb.net
 20240115	17:27:25	b8bf6f02-20a6-4670-b4e8-481abae9121a	undefined: ETIMEOUT	querySrv	_mongodb._tcp.cluster0.j4vwb4o.mongodb.net
 20240116	17:28:59	1bf0912c-6d6e-4032-80c6-92cbad6deabe	undefined: undefined	undefined	undefined
+20240117	00:07:43	d00bd290-ed03-4f2a-af60-862dc1677750	undefined: ETIMEOUT	querySrv	_mongodb._tcp.cluster0.j4vwb4o.mongodb.net
+20240117	21:05:18	e6236a2c-1026-4860-8ab1-fbdf7baee93e	undefined: ETIMEOUT	querySrv	_mongodb._tcp.cluster0.j4vwb4o.mongodb.net

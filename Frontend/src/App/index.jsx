@@ -13,28 +13,30 @@
 // export default App
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './common/Login'
-import Home from './common/Home'
-import Clientdashboard from './client/pages/Client-dashboard'
-import ClientOpentickets from './client/pages/ClientOpentickets'
-import ClientRoutes from './client/pages/ClientRoutes'
-import Clientsubmittickets from './client/pages/Client-submittickets'
-import Clientresolvedtickets from './client/pages/Client-resolvedtickets'
-import Profile from './client/pages/Profile'
-
+import Home from './Pages/common/Home'
+import Login from './Pages/common/Login'
+import { ClientRoutes,ClientOpentickets,Clientresolvedtickets,Clientsubmittickets,Details,Profile,InProgressticket} from '../App/Pages/Client/Commonroutes'
+import {Buckets,Pickedtickets,OpenDetailTicket,Agentdashboard,AgentRoutes} from '../App/Pages/Agent/Commonroutesagent'
 const App = () => {
   const user='client'
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
         <Route element={<ClientRoutes/>}>
-          <Route path="/_" element={<Clientdashboard/>} />
-          <Route path="/_open" element={<ClientOpentickets/>} />
-          <Route path='/_submit' element={<Clientsubmittickets/>}/>
-          <Route path='/_resolved' element={<Clientresolvedtickets/>}/>
-          <Route path='/_profile' element={<Profile/>}/>
+        <Route path="/_open" element={<ClientOpentickets/>}/>
+        <Route path='/_submit' element={<Clientsubmittickets/>}/>
+        <Route path='/In-Progress' element={<InProgressticket/>}/>
+        <Route path='/_resolved' element={<Clientresolvedtickets/>}/>
+        <Route path='/_profile' element={<Profile/>}/>
+        <Route path='/request/detail/:id' element={<Details/>}/>
+        </Route>
+        <Route element={<AgentRoutes/>}>
+          <Route path='/dashboard' element={<Agentdashboard/>}/>
+          <Route path='/bucket' element={<Buckets/>}/>
+          <Route path='/my-picks' element={<Pickedtickets/>}/>
+          <Route path="agent/detail/:id" element={<OpenDetailTicket />} />
         </Route>
       </Routes>
     </BrowserRouter>
